@@ -8,14 +8,16 @@ app = Flask(__name__)
 def welcome():
     return "hello world"
 
-@app.route('/map/<datestr>')
-def map(datestr):
-    print datestr
-    date_info = datestr.split("+")
-    year = int(date_info[3])
-    month = date_info[1]
-    date = int(date_info[2])
-    hour = (date_info[4].split(":")[0])
+@app.route('/map/<datestr1>/<datestr2>')
+def map(datestr1, datestr2):
+    print datestr1
+    print datestr2
+    date_info1 = datestr1.split("+")
+    date_info2 = datestr2.split("+")
+    year = int(date_info1[3])
+    month = date_info1[1]
+    date = int(date_info1[2])
+    hour = (date_info2[4].split(":")[0])
     print year, month, date, hour
     data = database.get_car_info(year, month, date, hour)
     response = app.response_class(
