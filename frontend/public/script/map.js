@@ -7,6 +7,8 @@ app.controller('myCtrl', function ($scope, $http) {
     var point = new BMap.Point(114.0579, 22.5431);
     map.centerAndZoom(point, 13);
     var points;
+    $scope.date = new Date();
+    $scope.hour = new Date();
 
     $scope.click = function () {
         //console.log($scope.date.getTime());
@@ -16,24 +18,24 @@ app.controller('myCtrl', function ($scope, $http) {
             method: 'GET',
             url: 'http://localhost:5000/map/' + $scope.date + '/' + $scope.hour
         }).then(function (res) {
+                console.log(res);
                 points = res.data.data;
-                console.log(points[1].logitude);
+                console.log(points[1]);
+
+                function addMarker(point) {
+                    var newPoint = new BMap.Point(point.logitude, point.latitude);
+                    var marker = new BMap.Marker(newPoint);
+                    map.addOverlay(marker);
+                    var label = new BMap.Label(point.pm2d5, {offset: new BMap.Size(20, -10)});
+                    marker.setLabel(label);
+                }
+
+                points.forEach(point => addMarker(point));
             }
         );
+
     }
 
-    $scope.show = function () {
-        function addMarker(point) {
-            console.log(point);
-            var marker = new BMap.Marker(point);
-            map.addOverlay(marker);
-            var label = new BMap.Label("label", {offset: new BMap.Size(20, -10)});
-            marker.setLabel(label);
-        }
-
-        points.map(point => new BMap.Point(point.latitude, point.logitude))
-            .forEach(point => addMarker(point));
-    }
 });
 
 
