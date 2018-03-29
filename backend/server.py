@@ -12,8 +12,9 @@ def welcome():
 def map(datestr1, datestr2):
     print datestr1
     print datestr2
-    date_info1 = datestr1.split("+")
-    date_info2 = datestr2.split("+")
+    date_info1 = datestr1.split(" ")
+    date_info2 = datestr2.split(" ")
+    print date_info1
     year = int(date_info1[3])
     month = date_info1[1]
     date = int(date_info1[2])
@@ -25,6 +26,7 @@ def map(datestr1, datestr2):
         status=200,
         mimetype='application/json'
     )
+    response.headers['Access-Control-Allow-Origin'] = '*'
     return response
 
 
