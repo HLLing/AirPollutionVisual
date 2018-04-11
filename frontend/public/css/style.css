@@ -33,14 +33,30 @@ body, html, #allmap {
     position: absolute;
     left: 95px;
     width: 150px;
-    top: -6px;
-    font-size: 36px;
+    top: 0px;
+    font-size: 30px;
+}
+
+#Graph {
+    position: absolute;
+    bottom: 12px;
+    right: 400px;
+    display: inline;
+    cursor: pointer;
 }
 
 #Date {
     position: absolute;
     bottom: 12px;
     right: 95px;
+    display: inline;
+    cursor: pointer;
+}
+
+#Button {
+    position: absolute;
+    bottom: 12px;
+    right: 25px;
     display: inline;
     cursor: pointer;
 }
@@ -54,3 +70,77 @@ body, html, #allmap {
     width: 305px;
     height: 40px;
 }
+
+.DashBoard_Item {
+    position: relative;
+    float: left;
+    height: 40px;
+    width: 60px;
+    border-right: 1px solid #f9f9f9;
+}
+
+#DashBoard_Point, #DashBoard_Region,
+#DashBoard_City, #DashBoard_History,
+#DashBoard_Month {
+    padding-top: 6px;
+    width: 28px;
+    height: 28px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.panel {
+    position: absolute;
+    padding: 10px;
+    top: 400px;
+    right: 10px;
+    min-height: 80px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    z-index: 9000;
+    height: auto;
+}
+
+.range-good {
+    background: #00B14B;
+    fill: #00B14B;
+}
+
+.range-moderate {
+    background: #FFFF00;
+    fill: #FFFF00;
+}
+
+.range-sensitve {
+    background: #FF9A00;
+    fill: #FF9A00;
+}
+
+.range-unhealthy {
+    background: #FF0000;
+    fill: #FF0000;
+}
+
+.range-very-unhealthy {
+    background: #C20000;
+    fill: #C20000;
+}
+
+.range-hazardous {
+    background: #5c0000;
+    fill: #5c0000;
+}
+
+td {
+    border-bottom: 0.1rem solid #e1e1e1;
+    padding: 0.5rem 0.1rem;
+    text-align: left;
+}
+
+#DashBoard_Region img, #DashBoard_City img,
+#DashBoard_History img, #DashBoard_Air img,
+#DashBoard_Month img {
+    width: 28px;
+    height: 28px;
+}
+
