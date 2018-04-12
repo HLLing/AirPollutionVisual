@@ -28,7 +28,7 @@ app.controller('myCtrl', function ($scope, $http) {
 
       function addMarker(point) {
         var newPoint = new BMap.Point(point.logitude, point.latitude);
-        var pm2d5 = (point.pm2d5 * 10) / 10;
+        var pm2d5 = Math.round(point.pm2d5 * 10) / 10;
         var iconDataUrl;
 
         if (pm2d5 <= 12) {
@@ -52,15 +52,15 @@ app.controller('myCtrl', function ($scope, $http) {
         });
         var marker = new BMap.Marker(newPoint, {icon: myIcon});
         map.addOverlay(marker);
-        var label = new BMap.Label(Math.round(pm2d5, {offset: new BMap.Size(0, 0)}));
-        marker.setLabel(label);
+        var label = new BMap.Label(pm2d5, {offset: new BMap.Size(5, 6)});
         label.setStyle({
-          borderColor:"#808080",
+          borderColor:"rgba(0, 0, 0, 0)",
           color:"#010101",
           fontSize: "14px",
-          fontWeight: "bold",
-          backgroundColor:"#fdfdfd"
+          //fontWeight: "bold",
+          backgroundColor: "rgba(0, 0, 0, 0)"
         });
+        marker.setLabel(label);
       }
 
       points.forEach(point => addMarker(point));
