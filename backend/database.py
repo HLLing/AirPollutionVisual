@@ -56,7 +56,8 @@ def datetime2matlabdn(dt):
 
 def get_hourid(year, month, date, hour):
     time_map = generate_time_map(HOURLY)
-    time = datetime.datetime(year=year, month=month, day=date, hour=hour)
+    time = datetime.datetime(year=int(year), month=int(month_map[month]), day=int(date), hour=int(hour))
+    print "Get time", time
     ind = find_largest_smaller_than(time_map, datetime2matlabdn(time))
     return ind
 
