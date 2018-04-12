@@ -1,6 +1,13 @@
 // Define an AugularJS app module
 var app = angular.module('myApp', []);
 
+var greenIconDataUrl = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB3aWR0aD0iNTMzLjMzMzMzMzMzMzMzMzMiIGhlaWdodD0iNTMzLjMzMzMzMzMzMzMzMzMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxnIGlkPSJnODMwIj4KICAgPHBhdGggZmlsbD0iIzQ1RTM0NiIgZmlsbC1vcGFjaXR5PSIwLjUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLXdpZHRoPSIyLjUiIGlkPSJwYXRoNjk1IiBkPSJtMzQuMDQxNjYsNDQuNzY3ODc5YzAsMCA0NDkuMjQ4MTk2LC0xLjI2MjAwMSA0NDcuOTg2MjAyLC0xLjI2MjAwMWMtMS4yNjE5OTMsMCAtMS4yNjE5OTMsMjc2LjM2MzExIC0xLjI2MTk5MywyNzYuMzYzMTFsLTE4OS4yOTAwMDksMGwtMzEuNTQ5MDExLDE0Ny42NDcwMDNsLTQ0LjE2Njk5MiwtMTQ2LjM4NTAxbC0xODEuNzE4MTk3LDIuNTIzOTg3bDAsLTI3OC44ODcwODl6Ii8+CiAgIDxwYXRoIGZpbGw9IiM0NUUzNDYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBpZD0icGF0aDU1MiIgZD0ibTIyLjcxNDgsMzEuODIyOTAxYzAsMCA0NDkuMjQ4MjEzLC0xLjI2MjAwMSA0NDcuOTg2MTg5LC0xLjI2MjAwMWMtMS4yNjE5OTMsMCAtMS4yNjE5OTMsMjc2LjM2MzExMSAtMS4yNjE5OTMsMjc2LjM2MzExMWwtMTg5LjI5MDAwOSwwbC0zMS41NDg5ODEsMTQ3LjY0NzAwM2wtNDQuMTY3MDA3LC0xNDYuMzg1MDFsLTE4MS43MTgxOTksMi41MjM5ODdsMCwtMjc4Ljg4NzA5MXoiLz4KICA8L2c+CiA8L2c+Cjwvc3ZnPg==';
+var yellowIconDataUrl = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyB3aWR0aD0iNTMzLjMzMzMzMzMzMzMzMzMiIGhlaWdodD0iNTMzLjMzMzMzMzMzMzMzMzMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxnIGlkPSJnODMwIj4KICAgPHBhdGggZmlsbD0iI0Y1RjY0OCIgZmlsbC1vcGFjaXR5PSIwLjUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLXdpZHRoPSIyLjUiIGlkPSJwYXRoNjk1IiBkPSJtMzQuMDQxNjYsNDQuNzY3ODc5YzAsMCA0NDkuMjQ4MTk2LC0xLjI2MjAwMSA0NDcuOTg2MjAyLC0xLjI2MjAwMWMtMS4yNjE5OTMsMCAtMS4yNjE5OTMsMjc2LjM2MzExIC0xLjI2MTk5MywyNzYuMzYzMTFsLTE4OS4yOTAwMDksMGwtMzEuNTQ5MDExLDE0Ny42NDcwMDNsLTQ0LjE2Njk5MiwtMTQ2LjM4NTAxbC0xODEuNzE4MTk3LDIuNTIzOTg3bDAsLTI3OC44ODcwODl6Ii8+CiAgIDxwYXRoIGZpbGw9IiNGNUY2NDgiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBpZD0icGF0aDU1MiIgZD0ibTIyLjcxNDgsMzEuODIyOTAxYzAsMCA0NDkuMjQ4MjEzLC0xLjI2MjAwMSA0NDcuOTg2MTg5LC0xLjI2MjAwMWMtMS4yNjE5OTMsMCAtMS4yNjE5OTMsMjc2LjM2MzExMSAtMS4yNjE5OTMsMjc2LjM2MzExMWwtMTg5LjI5MDAwOSwwbC0zMS41NDg5ODEsMTQ3LjY0NzAwM2wtNDQuMTY3MDA3LC0xNDYuMzg1MDFsLTE4MS43MTgxOTksMi41MjM5ODdsMCwtMjc4Ljg4NzA5MXoiLz4KICA8L2c+CiA8L2c+Cjwvc3ZnPg==';
+var orangeIconDataUrl = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzY1IDU2MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzY1IDU2MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRjY5QjQ3IiBkPSJNMTgyLjksNTUxLjdjMCwwLjEsMC4yLDAuMywwLjIsMC4zUzM1OC4zLDI4MywzNTguMywxOTQuNmMwLTEzMC4xLTg4LjgtMTg2LjctMTc1LjQtMTg2LjkNCgkJQzk2LjMsNy45LDcuNSw2NC41LDcuNSwxOTQuNmMwLDg4LjQsMTc1LjMsMzU3LjQsMTc1LjMsMzU3LjRTMTgyLjksNTUxLjcsMTgyLjksNTUxLjd6IE0xMjIuMiwxODcuMmMwLTMzLjYsMjcuMi02MC44LDYwLjgtNjAuOA0KCQljMzMuNiwwLDYwLjgsMjcuMiw2MC44LDYwLjhTMjE2LjUsMjQ4LDE4Mi45LDI0OEMxNDkuNCwyNDgsMTIyLjIsMjIwLjgsMTIyLjIsMTg3LjJ6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==';
+var redIconDataUrl = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzY1IDU2MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzY1IDU2MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjNDVFMzQ2IiBkPSJNMTgyLjksNTUxLjdjMCwwLjEsMC4yLDAuMywwLjIsMC4zUzM1OC4zLDI4MywzNTguMywxOTQuNmMwLTEzMC4xLTg4LjgtMTg2LjctMTc1LjQtMTg2LjkNCgkJQzk2LjMsNy45LDcuNSw2NC41LDcuNSwxOTQuNmMwLDg4LjQsMTc1LjMsMzU3LjQsMTc1LjMsMzU3LjRTMTgyLjksNTUxLjcsMTgyLjksNTUxLjd6IE0xMjIuMiwxODcuMmMwLTMzLjYsMjcuMi02MC44LDYwLjgtNjAuOA0KCQljMzMuNiwwLDYwLjgsMjcuMiw2MC44LDYwLjhTMjE2LjUsMjQ4LDE4Mi45LDI0OEMxNDkuNCwyNDgsMTIyLjIsMjIwLjgsMTIyLjIsMTg3LjJ6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==';
+var purpleIconDataUrl = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzY1IDU2MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzY1IDU2MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjNDVFMzQ2IiBkPSJNMTgyLjksNTUxLjdjMCwwLjEsMC4yLDAuMywwLjIsMC4zUzM1OC4zLDI4MywzNTguMywxOTQuNmMwLTEzMC4xLTg4LjgtMTg2LjctMTc1LjQtMTg2LjkNCgkJQzk2LjMsNy45LDcuNSw2NC41LDcuNSwxOTQuNmMwLDg4LjQsMTc1LjMsMzU3LjQsMTc1LjMsMzU3LjRTMTgyLjksNTUxLjcsMTgyLjksNTUxLjd6IE0xMjIuMiwxODcuMmMwLTMzLjYsMjcuMi02MC44LDYwLjgtNjAuOA0KCQljMzMuNiwwLDYwLjgsMjcuMiw2MC44LDYwLjhTMjE2LjUsMjQ4LDE4Mi45LDI0OEMxNDkuNCwyNDgsMTIyLjIsMjIwLjgsMTIyLjIsMTg3LjJ6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==';
+var brownIconDataUrl = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzY1IDU2MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzY1IDU2MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjNDVFMzQ2IiBkPSJNMTgyLjksNTUxLjdjMCwwLjEsMC4yLDAuMywwLjIsMC4zUzM1OC4zLDI4MywzNTguMywxOTQuNmMwLTEzMC4xLTg4LjgtMTg2LjctMTc1LjQtMTg2LjkNCgkJQzk2LjMsNy45LDcuNSw2NC41LDcuNSwxOTQuNmMwLDg4LjQsMTc1LjMsMzU3LjQsMTc1LjMsMzU3LjRTMTgyLjksNTUxLjcsMTgyLjksNTUxLjd6IE0xMjIuMiwxODcuMmMwLTMzLjYsMjcuMi02MC44LDYwLjgtNjAuOA0KCQljMzMuNiwwLDYwLjgsMjcuMiw2MC44LDYwLjhTMjE2LjUsMjQ4LDE4Mi45LDI0OEMxNDkuNCwyNDgsMTIyLjIsMjIwLjgsMTIyLjIsMTg3LjJ6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==';
+
 // Define the controller for this app module
 app.controller('myCtrl', function ($scope, $http) {
   var map = new BMap.Map("allmap");
@@ -11,7 +18,6 @@ app.controller('myCtrl', function ($scope, $http) {
   $scope.hour = new Date();
 
   $scope.click = function () {
-
     $http({
       method: 'GET',
       url: 'http://localhost:5000/map/' + $scope.date + '/' + $scope.hour
@@ -22,15 +28,39 @@ app.controller('myCtrl', function ($scope, $http) {
 
       function addMarker(point) {
         var newPoint = new BMap.Point(point.logitude, point.latitude);
-        var myIcon = new BMap.Icon("images/green.png", new BMap.Size(40, 40), {
-          anchor: new BMap.Size(20, 40),
+        var pm2d5 = (point.pm2d5 * 10) / 10;
+        var iconDataUrl;
+
+        if (pm2d5 <= 12) {
+          iconDataUrl = greenIconDataUrl;
+        } else if (pm2d5 <= 35.4) {
+          iconDataUrl = yellowIconDataUrl;
+        } else if (pm2d5 <= 55.4) {
+          iconDataUrl = orangeIconDataUrl;
+        } else if (pm2d5 <= 150.4) {
+          iconDataUrl = redIconDataUrl;
+        } else if (pm2d5 <= 250.4) {
+          iconDataUrl = purpleIconDataUrl;
+        } else {
+          iconDataUrl = brownIconDataUrl;
+        }
+
+        var myIcon = new BMap.Icon(iconDataUrl, new BMap.Size(45, 45), {
+          anchor: new BMap.Size(22.5, 45),
           imageOffset: new BMap.Size(0, 0),
-          imageSize: new BMap.Size(40, 40),
+          imageSize: new BMap.Size(45, 45),
         });
         var marker = new BMap.Marker(newPoint, {icon: myIcon});
         map.addOverlay(marker);
-        var label = new BMap.Label(Math.round(point.pm2d5 * 100) / 100, {offset: new BMap.Size(20, -10)});
+        var label = new BMap.Label(Math.round(pm2d5, {offset: new BMap.Size(0, 0)}));
         marker.setLabel(label);
+        label.setStyle({
+          borderColor:"#808080",
+          color:"#010101",
+          fontSize: "14px",
+          fontWeight: "bold",
+          backgroundColor:"#fdfdfd"
+        });
       }
 
       points.forEach(point => addMarker(point));

@@ -102,33 +102,33 @@ body, html, #allmap {
 }
 
 .range-good {
-    background: #00B14B;
-    fill: #00B14B;
+    background: #45E346;
+    fill: #45E346;
 }
 
 .range-moderate {
-    background: #FFFF00;
-    fill: #FFFF00;
+    background: #F5F648;
+    fill: #F5F648;
 }
 
 .range-sensitve {
-    background: #FF9A00;
-    fill: #FF9A00;
+    background: #F69B47;
+    fill: #F69B47;
 }
 
 .range-unhealthy {
-    background: #FF0000;
-    fill: #FF0000;
+    background: #F64747;
+    fill: #F64747;
 }
 
 .range-very-unhealthy {
-    background: #C20000;
-    fill: #C20000;
+    background: #AD4478;
+    fill: #AD4478;
 }
 
 .range-hazardous {
-    background: #5c0000;
-    fill: #5c0000;
+    background: #99435B;
+    fill: #99435B;
 }
 
 td {
@@ -137,8 +137,7 @@ td {
     text-align: left;
 }
 
-#DashBoard_Region img, #DashBoard_City img,
-#DashBoard_History img, #DashBoard_Air img,
+#DashBoard_Pie img,
 #DashBoard_Month img {
     width: 28px;
     height: 28px;
