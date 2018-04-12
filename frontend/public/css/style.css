@@ -61,34 +61,6 @@ body, html, #allmap {
     cursor: pointer;
 }
 
-.DashBoard {
-    position: absolute;
-    top: 105px;
-    left: 170px;
-    z-index: 1;
-    background-color: #fac;
-    width: 305px;
-    height: 40px;
-}
-
-.DashBoard_Item {
-    position: relative;
-    float: left;
-    height: 40px;
-    width: 60px;
-    border-right: 1px solid #f9f9f9;
-}
-
-#DashBoard_Point, #DashBoard_Region,
-#DashBoard_City, #DashBoard_History,
-#DashBoard_Month {
-    padding-top: 6px;
-    width: 28px;
-    height: 28px;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
 .panel {
     position: absolute;
     padding: 10px;
@@ -135,11 +107,5 @@ td {
     border-bottom: 0.1rem solid #e1e1e1;
     padding: 0.5rem 0.1rem;
     text-align: left;
-}
-
-#DashBoard_Pie img,
-#DashBoard_Month img {
-    width: 28px;
-    height: 28px;
 }
 
