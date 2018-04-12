@@ -1,6 +1,8 @@
 from flask import Flask
 import json
 import database
+from datetime import datetime
+import datetime
 app = Flask(__name__)
 
 
@@ -29,7 +31,21 @@ def map(datestr1, datestr2):
     response.headers['Access-Control-Allow-Origin'] = '*'
     return response
 
-
+@app.route('/map/<timestamp>')
+def map_timestamp(timestamp):
+    dt = datetime.datetime.fromtimestamp(timestamp / 1000.0)
+    year = dt.year
+    month = dt.month
+    date = dt.day
+    hour = dt.hour
+    data = database.get_car_info(year, month, date, hour)
+    response = app.response_class(
+        response=json.dumps(data),
+        status=200,
+        mimetype='application/json'
+    )
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return response
 
 if __name__ == '__main__':
     app.run()
