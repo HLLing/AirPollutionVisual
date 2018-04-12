@@ -23,6 +23,7 @@ def map(datestr1, datestr2):
     hour = (date_info2[4].split(":")[0])
     print year, month, date, hour
     data = database.get_car_info(year, month, date, hour)
+    print data
     response = app.response_class(
         response=json.dumps(data),
         status=200,

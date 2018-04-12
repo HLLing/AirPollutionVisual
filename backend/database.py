@@ -82,6 +82,7 @@ def get_car_info(year, month, date, hour):
         res = random.sample(infos, MAX_POINT)
     else:
         res = infos
+    res = {"data": res}
     return res
 
 def get_car_info_fake(year, month, date, hour):
